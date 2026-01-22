@@ -32,14 +32,55 @@ app.get('/', (req, res) => {
     <!DOCTYPE html>
     <html lang="en">
     <head>
-        <title>Status</title>
+        <title>Vibe2Tweet</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;600&display=swap" rel="stylesheet">
         <style>
-          body { font-family: sans-serif; background: #111; color: #fff; display: flex; align-items: center; justify-content: center; height: 100vh; margin: 0; }
-          .badge { padding: 10px 20px; background: #28a745; border-radius: 4px; font-weight: bold; }
+            body { 
+                font-family: 'Outfit', sans-serif; 
+                background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #2a1b3d 100%);
+                color: #fff; 
+                display: flex; 
+                flex-direction: column;
+                align-items: center; 
+                justify-content: center; 
+                height: 100vh; 
+                margin: 0; 
+                overflow: hidden;
+            }
+            .container {
+                text-align: center;
+                animation: fadeIn 1.5s ease-out;
+            }
+            h1 {
+                font-size: 3.5rem;
+                font-weight: 600;
+                margin: 0;
+                background: linear-gradient(to right, #a18cd1, #fbc2eb);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                text-shadow: 0 10px 30px rgba(161, 140, 209, 0.3);
+                letter-spacing: -1px;
+            }
+            p {
+                font-size: 1.2rem;
+                font-weight: 300;
+                color: rgba(255, 255, 255, 0.6);
+                margin-top: 10px;
+                letter-spacing: 2px;
+                text-transform: uppercase;
+            }
+            @keyframes fadeIn {
+                0% { opacity: 0; transform: translateY(20px); }
+                100% { opacity: 1; transform: translateY(0); }
+            }
         </style>
     </head>
     <body>
-        <div class="badge">System Operational</div>
+        <div class="container">
+            <h1>Vibe2Tweet</h1>
+            <p>by MaxBasev</p>
+        </div>
     </body>
     </html>
   `);
